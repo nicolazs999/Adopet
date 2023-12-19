@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.CadastroAnimaisActivity"
+    android:background="@drawable/shape_degrade">
+
+    <ImageView
+        android:id="@+id/imageViewCadastroAnimais"
+        style="@style/img_estilo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_adopet" />
+
+    <View
+        android:id="@+id/viewCadastroAnimais"
+        style="@style/view_cadastro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCadastroAnimais"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewCadastroAnimais"
+        style="@style/legenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastro Animal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCadastroAnimais" />
+
+    <EditText
+        android:id="@+id/nome_animal"
+        style="@style/edit_text_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/baseline_account_circle_24"
+        android:hint="Nome do animal"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/viewCadastroAnimais"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/viewCadastroAnimais"
+        app:layout_constraintTop_toTopOf="@+id/viewCadastroAnimais" />
+
+
+    <EditText
+        android:id="@+id/racaAnimal"
+        style="@style/edit_text_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/baseline_pets_24"
+        android:drawableTint="#EBEB5B"
+        android:hint="Raca"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/viewCadastroAnimais"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/viewCadastroAnimais"
+        app:layout_constraintTop_toBottomOf="@+id/nome_animal" />
+
+    <EditText
+        android:id="@+id/idadeAnimal"
+        style="@style/edit_text_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/baseline_format_list_numbered_24"
+        android:hint="Idade"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/viewCadastroAnimais"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="@+id/viewCadastroAnimais"
+        app:layout_constraintTop_toBottomOf="@+id/racaAnimal" />
+
+    <EditText
+        android:id="@+id/endereco_animal"
+        style="@style/edit_text_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Endereço"
+        android:drawableRight="@drawable/baseline_not_listed_location_24"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/viewCadastroAnimais"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/viewCadastroAnimais"
+        app:layout_constraintTop_toBottomOf="@+id/idadeAnimal" />
+
+
+    <LinearLayout
+        android:id="@+id/layout_botao_cadastro_animal"
+        style="@style/layout_animal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/viewCadastroAnimais"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toStartOf="@+id/viewCadastroAnimais"
+        app:layout_constraintTop_toBottomOf="@+id/telefoneCadastro">
+
+        <Button
+            android:id="@+id/button_cadastrar_animal"
+            style="@style/botao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadastrar" />
+
+        <Button
+            android:id="@+id/button_limpar_cadastro_animal"
+            style="@style/botao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Limpar" />
+
+        <Button
+            android:id="@+id/btnSelectImage"
+            style="@style/botao"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Imagem" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/listar_animais"
+        style="@style/link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/baseline_home_24"
+        android:text="Menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_botao_cadastro_animal"
+        app:layout_constraintVertical_bias="1.0"
+        />
+    <TextView
+        android:id="@+id/loginText"
+        style="@style/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/baseline_login_24"
+        android:text="SAIR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/telefoneCadastro"
+        style="@style/edit_text_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Telefone"
+        android:drawableRight="@drawable/baseline_contact_phone_24"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/viewCadastroAnimais"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/viewCadastroAnimais"
+        app:layout_constraintTop_toBottomOf="@+id/endereco_animal" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
